@@ -1,0 +1,18 @@
+The steps first taken to break the encryption were to take a frequency count of the ciphertext, with the view of finding what letters occur most; 
+this usually points to the letter E being most frequent in the English language. Initially, while trying to decode the text, though the entire ciphertext 
+was not decrypted, some parts resembled valid english words. I have picked a couple of obvious substitutions manually: Common words, like "and," "the," 
+and "it," from their patterns it became clear would pop up time and time again. This therefore allowed me to map some letters with a lot of confidence. 
+It was these initial mappings that were used to build my "known_mappings," which in turn served as the starting point for further decryption.
+
+I followed this up by taking those manual mappings and created frequency analysis of the yet-unmapped letters. Adding in the NLTK English word corpus 
+allowed me to validate and create the substitution more accurately, making sure the decrypted text made some sort of sense in English. 
+It was an iterative process through which I could slowly uncover the full substitution map, improving the accuracy of the decryption at each step.
+
+
+Online resources:
+
+
+The following resource helped me identify the necessity of using nltk corpus for frequency analysis:
+
+
+https://stackoverflow.com/questions/40669141/python-nltk-counting-word-and-phrase-frequency

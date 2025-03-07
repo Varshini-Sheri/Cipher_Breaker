@@ -1,0 +1,25 @@
+
+Approach:
+
+The initial approach involved looping through the dictionary and trying different cracking techniques—such as Caesar cipher shifts and leetspeak substitutions—on 
+each password before hashing and comparing it with the stored hashes. However, this approach only managed to crack user1 while the rest remained uncracked.
+
+I shifted my strategy to generate all possible password variants—utilizing both Caesar shifts and leetspeak substitutions—before attempting to hash and 
+compare them with the stored hashes.
+
+And coming to the hash algorithms, Initially, I was using a limited set of algorithms like MD5, SHA1, and SHA256. This resulted in only user1 being decrypted 
+successfully, while the rest of the users remained uncracked. I expanded the number of hashing algorithms to include a broader range like SHA224, SHA384, SHA512, and the 
+SHA3 family (SHA3_224, SHA3_256, etc.), with the help of the resource listed in hints.txt.
+
+
+Total execution time for users 1-6:
+
+user1:  0.00 seconds
+user2:  20.56 seconds
+user3:  0.22 seconds
+user4:  1.08 seconds
+user5:  0.01 seconds
+user6:  0.01 seconds
+
+
+
